@@ -1,0 +1,12 @@
+2025-07-06T14:30:09+00:00 >> attack_process.php loaded
+2025-07-06T14:30:09+00:00 RoundID=1
+2025-07-06T14:30:09+00:00 >> Attempting to log event: steal_cash of 3184362 (details: )
+2025-07-06T14:30:09+00:00 >> INSERT succeeded
+2025-07-06T14:34:27+00:00 >> attack_process.php loaded
+2025-07-06T14:34:27+00:00 RoundID=1
+2025-07-06T14:34:27+00:00 >> Attempting to log event: steal_cash of 1355457 (details: )
+2025-07-06T14:34:27+00:00 >> INSERT succeeded
+2025-07-06T14:37:35+00:00 >> attack_process.php loaded
+2025-07-06T14:37:35+00:00 RoundID=1
+2025-07-06T14:37:35+00:00 >> Attempting to log event: steal_cash of 851679 (details: )
+2025-07-06T14:37:35+00:00 >> INSERT succeeded

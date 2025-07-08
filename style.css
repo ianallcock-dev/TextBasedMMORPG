@@ -1,0 +1,228 @@
+/* style.css */
+
+/* 1) IMPORT FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Cinzel:wght@400;700&display=swap');
+
+/* 2) VARIABLES */
+:root {
+  --bg-dark:      #121212;
+  --panel-dark:   #1f1f1f;
+  --brass:        #D4AF37;
+  --copper:       #B66E30;
+  --text-light:   #EAE5D8;
+
+  /* your generated noise tile */
+  --noise:        url('images/noise.png') repeat;
+  /* your generated gear-mask SVG */
+  --gear-mask:    url('images/gears_mask.svg') no-repeat center center;
+}
+
+/* 3) RESET & BASE */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html { font-size: 16px; }
+body {
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  /*background-color: var(--bg-dark);*/
+  background: url('images/metaltile.png') repeat;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* 4) TYPOGRAPHY */
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+  color: var(--brass);
+  margin-bottom: 0.5em;
+  letter-spacing: 0.05em;
+}
+p, li, a { font-size: 1rem; }
+
+/* 5) HEADER ART & STRUCTURE */
+/* replace your old .header-art rules with: */
+.header-art {
+  position: relative;
+  width: 100%;
+  height: 200px;                /* adjust to suit your design */
+  background: url('images/steampunk_header.png') 
+              center center / cover no-repeat;
+  overflow: hidden;
+}
+
+/* now style the overlay text */
+.header-art__title {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-family: 'Cinzel', serif;
+  font-size: 3.5rem;
+  color: var(--text-light);
+  text-shadow: 2px 2px rgba(0,0,0,0.7);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.header-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+/* 6) NAVIGATION (horizontal & centered) */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  background-color: var(--panel-dark);
+  background-image: var(--noise);
+  border-top: 2px solid var(--brass);
+}
+nav a {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--text-light);
+  padding: 1rem 0;
+  text-align: center;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--copper);
+  transition: width 0.25s ease, left 0.25s ease;
+}
+nav a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* 7) NAV TOGGLE (mobile) */
+.nav-toggle {
+  display: none;
+  background: var(--brass);
+  color: var(--bg-dark);
+  border: none;
+  padding: 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  nav {
+    flex-direction: column;
+    display: none;
+  }
+  nav.show { display: flex; }
+}
+
+/* 8) PANEL / CARD EMBOSSED GEAR ACCENT */
+.container, .card {
+  position: relative;
+  background-color: var(--panel-dark);
+  background-image: var(--noise);
+  border: 1px solid var(--copper);
+  border-radius: 8px;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.7), 0 4px 6px rgba(0,0,0,0.8);
+  overflow: hidden;
+  padding: 1.5rem;
+  margin: 1.5rem auto;
+  max-width: 960px;
+}
+.container::before,
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 200px; height: 200px;
+  background: var(--gear-mask) center/contain no-repeat;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* 9) BUTTONS */
+button, .btn {
+  position: relative;
+  display: inline-block;
+  font-family: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: transparent;
+  color: var(--text-light);
+  border: 2px solid var(--brass);
+  border-radius: 4px;
+  padding: 0.65em 1.2em;
+  overflow: hidden;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+button::before, .btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--brass);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+button:hover::before, .btn:hover::before {
+  transform: scaleX(1);
+}
+button span, .btn span {
+  position: relative;
+  z-index: 1;
+}
+
+/* 10) FOOTER */
+footer {
+  background-color: var(--panel-dark);
+  background-image: var(--noise);
+  border-top: 3px solid var(--brass);
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* 11) SECTION TITLES WITH GEAR ICON */
+h2 {
+  position: relative;
+}
+h2::before {
+  font-family: "FontAwesome";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2em;
+  color: var(--copper);
+}
+
+/* 12) UTILITIES */
+.text-center { text-align: center; }
+.mt-1        { margin-top: 1rem; }
+.mb-1        { margin-bottom: 1rem; }
+.p-1         { padding: 1rem; }
