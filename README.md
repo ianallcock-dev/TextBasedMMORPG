@@ -1,6 +1,5 @@
-# YOUR_PROJECT_NAME
-
-A modern take on an old genre, a homage to the old turn based text MMORPGs I used to play. I wanted to re-live the experience so decided to build one.
+# TEXT BASED MMORPG
+A modern take on an old genre, a homage to the old turn based text MMORPGs I used to play. I wanted to re-live the experience so decided to build one with a steampunk aesthetic.
 
 This project features:
 
@@ -17,6 +16,20 @@ This project features:
 - ✅ Flexible design for desktop and mobile
 
 ---
+## 🚀 Screenshots
+
+![login](https://github.com/user-attachments/assets/930eb3e0-3231-4769-8366-516e8f8a6bb4)
+![dashboard](https://github.com/user-attachments/assets/e416ac01-32c7-41ea-bdd5-bba756166a1e)
+![inbox](https://github.com/user-attachments/assets/aa2aacea-57c1-450b-991c-a4e92e776897)
+![gangs](https://github.com/user-attachments/assets/ba2e97ff-76b9-42ef-ad69-7e27b0962289)
+![attack](https://github.com/user-attachments/assets/bcc9460e-a6d2-4467-b717-c4b81d45e45e)
+![account](https://github.com/user-attachments/assets/83190c20-561e-4967-8ce1-68f0c14087ad)
+![recruit](https://github.com/user-attachments/assets/4ea6cad3-3c8d-430c-941b-6cc028aaf72a)
+![marketplace](https://github.com/user-attachments/assets/81343a11-7f89-4561-8b06-fdba3771db79)
+![leaderboard](https://github.com/user-attachments/assets/c213d535-9cb1-4922-8085-9f36afcf76f1)
+![invest](https://github.com/user-attachments/assets/3b0155b2-6cf2-43d4-9b7d-dedd8b605b4e)
+
+
 
 ## 🚀 Demo
 
