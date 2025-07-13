@@ -1,9 +1,9 @@
 <?php
 date_default_timezone_set('UTC');
 $host = 'localhost';
-$db   = 'game';
-$user = 'TextMMORPG';
-$pass = 'TextBasedMMORPG';
+$db   = 'YOURDATABASE';
+$user = 'YOURUSER';
+$pass = 'YOURPASSWORD';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4", $user, $pass);
